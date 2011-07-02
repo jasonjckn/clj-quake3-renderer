@@ -29,7 +29,7 @@
         exists? (fn [path] (.exists (file path)))
 
         find-texture (fn [name]
-                       (let [prefix (str "res/q3demo/" name)
+                       (let [prefix (str "res/qarea51/" name)
                              search-paths (map str (repeat prefix) [".jpg" ".tga"])
                              valid-paths (filter exists? search-paths)]
                          (when-first [v valid-paths] v)))
@@ -42,7 +42,7 @@
                          (assoc desc :data (load-texture-from-file
                                             (find-texture (:name desc))))
                          (catch Exception e
-                           ;(println desc)
+                           (println desc)
                            desc)))
         textures* (doall (->> textures (map alter-texture) (map load-texture)))
 
@@ -67,7 +67,7 @@
    :camera cam/init})
 
 (defnl heavy-state []
-  (let [bsp (post-process (bsp/parse "res/q3demo/maps/q3dm1.bsp"))]
+  (let [bsp (post-process (bsp/parse "res/qarea51/maps/quarea51.bsp"))]
 
     (-> (simple-state)
         (assoc :bsp bsp)

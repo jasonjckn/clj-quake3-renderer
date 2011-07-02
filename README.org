@@ -1,0 +1,21 @@
+
+* Quake 3 Map Renderer
+
+Loads BSP files and renders them.
+
+
+* How to Run?
+#+BEGIN_SRC: bash
+lein deps
+lein native-deps
+lein run
+#+END_SRC
+
+* Controls
++ Click and drag mouse to position viewport.
++ Use keys w & s to move around.
+
+
+* Screenshot
+[[https://github.com/jasonjckn/clj-quake3-renderer/raw/master/pic.png]]
+

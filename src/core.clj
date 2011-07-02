@@ -29,7 +29,7 @@
         exists? (fn [path] (.exists (file path)))
 
         find-texture (fn [name]
-                       (let [prefix (str "res/qarea51/" name)
+                       (let [prefix (str "res/quarea51/" name)
                              search-paths (map str (repeat prefix) [".jpg" ".tga"])
                              valid-paths (filter exists? search-paths)]
                          (when-first [v valid-paths] v)))
@@ -67,7 +67,7 @@
    :camera cam/init})
 
 (defnl heavy-state []
-  (let [bsp (post-process (bsp/parse "res/qarea51/maps/quarea51.bsp"))]
+  (let [bsp (post-process (bsp/parse "res/quarea51/maps/quarea51.bsp"))]
 
     (-> (simple-state)
         (assoc :bsp bsp)

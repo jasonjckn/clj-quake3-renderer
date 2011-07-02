@@ -63,7 +63,7 @@
         (assoc :faces faces*))))
 
 (defnl simple-state []
-  {:mouse (vec2 90 -90) 
+  {:mouse  (vec2 -391.0 -87.0)  ;(vec2 90 -90) 
    :camera cam/init})
 
 (defnl heavy-state []

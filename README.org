@@ -3,6 +3,8 @@
 
 Loads BSP files and renders them.
 
+Right now only a few BSP features are handled.
+
 
 * How to Run?
 #+BEGIN_SRC: bash

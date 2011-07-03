@@ -121,14 +121,14 @@
   (condp = key
       "r" (init {})
       "R" (do (settings) (merge st  (simple-state))) 
-      "," (update-in st [:camera] #(cam/moving % 1.0))
-      "o" (update-in st [:camera] #(cam/moving % -1.0))
+      "w" (update-in st [:camera] #(cam/moving % 1.0))
+      "s" (update-in st [:camera] #(cam/moving % -1.0))
       st))
 
 (defnl key-release [key {:keys [mouse vel] :as st}]
   (condp = key
-          "," (update-in st [:camera] #(cam/moving % 0.0))
-          "o" (update-in st [:camera] #(cam/moving % 0.0))
+          "w" (update-in st [:camera] #(cam/moving % 0.0))
+          "s" (update-in st [:camera] #(cam/moving % 0.0))
           st))
 
 (defnl key-type [key {:keys [mouse camera] :as st}]
